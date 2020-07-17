@@ -1,5 +1,27 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
+
+const kf = keyframes`
+  0% {
+    transform: scale(0) rotate(0deg);
+  }
+  25% {
+    transform: scale(0.25) rotate(90deg);
+    opacity: 0.25;
+  }
+  50% {
+    transform: scale(0.5) rotate(180deg);
+    opacity: 0.5;
+  }
+  75% {
+    transform: scale(0.75) rotate(270deg);
+    opacity: 0.75;
+  }
+  100% {
+    transform: scale(1) rotate(360deg);
+    opacity: 1;
+  }
+`
 
 export const Container = styled.div`
   background-color: ${(props) => props.bgColor || null};
@@ -21,6 +43,9 @@ export const Box = styled.div`
     height: ${props => props.height || 'auto'};
     margin: ${props => props.margin || '20px 0'};
     padding: ${props => props.padding || '15px'};
+    transform: scale(0);
+    animation: ${kf} 1s ease-in-out forwards;
+    opacity: 0;
     /* border: 1px solid grey; */
 `
 
