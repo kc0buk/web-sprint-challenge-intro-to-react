@@ -63,3 +63,13 @@ export const BodyText = styled.p`
     font-size: 1.2rem;
     font-weight: 400;
 `
+
+export const Button = styled.button`
+    font-size: 1.5rem;
+    padding: 6px 10px;
+    margin: 10px;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    background-color: darkgrey;
+`
